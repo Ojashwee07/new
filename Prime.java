@@ -1,4 +1,4 @@
-public class PrimeChecker {
+public class Prime {
     public static void main(String[] args) {
         int num = 7; 
         boolean isPrime = true;

@@ -1,4 +1,4 @@
-public class String {
+public class code {
     public static void main(String[] args) {
         String str = "Rishi";
         for (int i = 0; i < str.length(); i++) {

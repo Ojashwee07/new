@@ -8,7 +8,8 @@ public class ArraySum {
              System.out.println("The sum of the array is: " + sum);
     }
     public static int calculateSum(int[] array) {
-        int sum = 0;         for (int num : array) {
+        int sum = 0;        
+         for (int num : array) {
             sum += num; 
         }
         return sum;

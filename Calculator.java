@@ -1,51 +1,42 @@
-import java.util.Scanner;
-
 public class Calculator {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    
+    // Adds two numbers
+    public double add(double num1, double num2) {
+        return num1 + num2;
+    }
 
-        System.out.println("Simple Calculator");
-        System.out.println("Enter first number: ");
-        double num1 = scanner.nextDouble();
+    // Subtracts the second number from the first
+    public double subtract(double num1, double num2) {
+        return num1 - num2;
+    }
 
-        System.out.println("Enter second number: ");
-        double num2 = scanner.nextDouble();
+    // Multiplies two numbers
+    public double multiply(double num1, double num2) {
+        return num1 * num2;
+    }
 
-        System.out.println("Choose an operation: ");
-        System.out.println("1. Addition (+)");
-        System.out.println("2. Subtraction (-)");
-        System.out.println("3. Multiplication (*)");
-        System.out.println("4. Division (/)");
-
-        int choice = scanner.nextInt();
-        double result;
-
-        switch (choice) {
-            case 1:
-                result = num1 + num2;
-                System.out.println("Result: " + num1 + " + " + num2 + " = " + result);
-                break;
-            case 2:
-                result = num1 - num2;
-                System.out.println("Result: " + num1 + " - " + num2 + " = " + result);
-                break;
-            case 3:
-                result = num1 * num2;
-                System.out.println("Result: " + num1 + " * " + num2 + " = " + result);
-                break;
-            case 4:
-                if (num2 != 0) {
-                    result = num1 / num2;
-                    System.out.println("Result: " + num1 + " / " + num2 + " = " + result);
-                } else {
-                    System.out.println("Error: Division by zero is not allowed.");
-                }
-                break;
-            default:
-                System.out.println("Invalid operation selected.");
-                break;
+    // Divides the first number by the second (handles division by zero)
+    public double divide(double num1, double num2) {
+        if (num2 == 0) {
+            throw new ArithmeticException("Division by zero is not allowed");
         }
+        return num1 / num2;
+    }
 
-        scanner.close();
+    public static void main(String[] args) {
+        Calculator myCalculator = new Calculator();
+
+        // Example calculations
+        System.out.println("Addition: 12.5 + 3.2 = " + myCalculator.add(12.5, 3.2));
+        System.out.println("Subtraction: 15.8 - 7.3 = " + myCalculator.subtract(15.8, 7.3));
+        System.out.println("Multiplication: 4.5 * 6 = " + myCalculator.multiply(4.5, 6));
+        System.out.println("Division: 20 / 4 = " + myCalculator.divide(20, 4));
+
+        // Handle division by zero scenario
+        try {
+            System.out.println("Division by zero: 10 / 0 = " + myCalculator.divide(10, 0));
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 }

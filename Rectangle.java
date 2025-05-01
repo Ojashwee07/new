@@ -1,25 +1,27 @@
-class Rectangle {
-    // Instance variables
-    double length;
-    double width;
+public class Rectangle {
+    public  double length;
+    public  double breadth;
 
-    // Constructor to initialize length and width
-    public Rectangle(double length, double width) {
+    public Rectangle(double length, double breadth) {
         this.length = length;
-        this.width = width;
+        this.breadth = breadth;
     }
 
-    // Method to calculate the area of the rectangle
     public double calculateArea() {
-        return length * width;
+        return length * breadth;
+    }
+
+    public double calculatePerimeter() {
+        return 2 * (length + breadth);
     }
 
     public static void main(String[] args) {
-        // Create an object of the Rectangle class and assign values to length and width
-        Rectangle myRectangle = new Rectangle(5.0, 3.0);
+        Rectangle rectangle1 = new Rectangle(5, 10);
+        Rectangle rectangle2 = new Rectangle(3.5, 2.5);
+        Rectangle rectangle3 = new Rectangle(10, 20);
 
-        // Calculate and print the area of the rectangle
-        double area = myRectangle.calculateArea();
-        System.out.println("Area of the rectangle: " + area);
+        System.out.println("Rectangle 1 - Area: " + rectangle1.calculateArea() + ", Perimeter: " + rectangle1.calculatePerimeter());
+        System.out.println("Rectangle 2 - Area: " + rectangle2.calculateArea() + ", Perimeter: " + rectangle2.calculatePerimeter());
+        System.out.println("Rectangle 3 - Area: " + rectangle3.calculateArea() + ", Perimeter: " + rectangle3.calculatePerimeter());
     }
 }

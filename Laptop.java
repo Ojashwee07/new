@@ -1,21 +1,32 @@
-class Laptop {
-        String brand;
-    int ram; 
-       int storage; 
-    public Laptop(String brand, int ram, int storage) {
-        this.brand = brand;
-        this.ram = ram;
-        this.storage = storage;
+public class Laptop {
+    public String brand;
+    public int ram; // in GB
+    public double price;
+
+    // Constructor to initialize values
+    public Laptop(String brand, int ram, double price) {
+    this.brand = brand;
+    this.ram = ram;
+    this.price = price;
     }
-    public String getDetails() {
-        return "Brand: " + brand + ", RAM: " + ram + "GB, Storage: " + storage + "GB";
+
+    // Method to display laptop details
+    public void displayDetails() {
+    System.out.println("Brand: " + brand);
+    System.out.println("RAM: " + ram + "GB");
+    System.out.printf("Price: $%.2f%n", price);
+    System.out.println(); // For spacing between entries
     }
+
     public static void main(String[] args) {
-        Laptop laptop1 = new Laptop("Dell", 16, 512);
-        Laptop laptop2 = new Laptop("HP", 8, 256);
-        Laptop laptop3 = new Laptop("Apple", 16, 1024);
-        System.out.println("Laptop 1 Details: " + laptop1.getDetails());
-        System.out.println("Laptop 2 Details: " + laptop2.getDetails());
-        System.out.println("Laptop 3 Details: " + laptop3.getDetails());
+    // Create laptop objects
+    Laptop laptop1 = new Laptop("Dell", 16, 899.99);
+    Laptop laptop2 = new Laptop("Apple", 8, 1299.99);
+    Laptop laptop3 = new Laptop("HP", 12, 699.50);
+
+    // Display their details
+    laptop1.displayDetails();
+    laptop2.displayDetails();
+    laptop3.displayDetails();
     }
 }

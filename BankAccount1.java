@@ -1,5 +1,5 @@
 class BankAccount1 {
-    private double balance;
+    private final double balance;
     public BankAccount1(double initialBalance) {
         this.balance = initialBalance;
     }

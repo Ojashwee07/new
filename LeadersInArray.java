@@ -19,10 +19,10 @@ public class LeadersInArray {
 
         // Traverse the array from right to left
         for (int i = n - 2; i >= 0; i--) {
-            if (arr[i] > maxFromRight) {
-                leaders.add(arr[i]); // Found a new leader
-                maxFromRight = arr[i]; // Update the maximum
-            }
+        if (arr[i] > maxFromRight) {
+        leaders.add(arr[i]); // Found a new leader
+      maxFromRight = arr[i]; // Update the maximum
+        }
         }
 
         // Reverse the list to maintain the order of leaders

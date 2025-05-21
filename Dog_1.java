@@ -1,6 +1,6 @@
-class Dog {
+class Dog_1 {
     String name;
-    public Dog(String name) {
+    public Dog_1(String name) {
         this.name = name;
     }
     public String getName() {

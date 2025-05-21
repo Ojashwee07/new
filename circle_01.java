@@ -1,0 +1,22 @@
+// Define the Shape interface
+interface Shape {
+    double area(); // Method to calculate area
+}
+
+// Implement the Circle class that implements Shape
+class Circle implements Shape {
+    private double radius = 5; // Radius of the circle
+
+    @Override
+    public double area() {
+        return Math.PI * radius * radius; // Calculate area using the formula πr²
+    }
+}
+
+// Main class to test the implementation
+public class circle_01 {
+    public static void main(String[] args) {
+        Circle circle = new Circle(); // Create an instance of Circle
+        System.out.println("Area of the circle: " + circle.area()); // Print the area
+    }
+}

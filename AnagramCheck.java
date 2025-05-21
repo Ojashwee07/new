@@ -6,7 +6,7 @@ public class AnagramCheck {
         String str2 = "silent";
         
         boolean isAnagram = areAnagrams(str1, str2);
-        System.out.println("Are the two strings anagrams? " + isAnagram);
+        System.out.println("Are the two strings anagrams= " + isAnagram);
     }
 
     public static boolean areAnagrams(String str1, String str2) {
